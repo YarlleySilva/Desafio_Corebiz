@@ -8,7 +8,7 @@ const Newsletter = () => {
 
   // const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const [Modal, open, close, isOpen] = useModal('root', {
+  const [Modal, open, close] = useModal('root', {
     preventScroll: true
   });
 
@@ -19,7 +19,7 @@ const Newsletter = () => {
   const handleSubmiteForm = (e) => {
     e.preventDefault();
     setEmail(email);
-    console.log(email);
+    console.log(`${name} e ${email}`);
   }
   return (
     <div className="container">

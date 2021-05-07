@@ -41,32 +41,3 @@ const Menu = () => {
 }
 
 export default Menu;
-
-
-
-{/* <div className="header-div1">
-
-          <div>
-            <img src={Hamburger} alt="" />
-          </div>
-
-          <div>
-            <img src={Logo} alt="" style={{ width: 109 }} />
-          </div>
-
-          <div>
-            <img src={Cart} alt="" />
-            <div>1</div>
-          </div>
-
-        </div>
-
-        <div className="header-div2">
-
-          <div>
-            <img src={Search} alt="" />
-          </div>
-
-          <div>Minha Conta</div>
-
-        </div> */}
