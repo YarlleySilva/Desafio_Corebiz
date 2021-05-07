@@ -1,0 +1,27 @@
+.carousel-dots {
+  margin-top: -4rem !important;
+  z-index: 1;
+}
+
+.carousel-track {
+  z-index: -1;
+}
+
+.carousel-dots li button:before {
+  opacity: 100% !important;
+  color: #BDBDBD !important;
+}
+
+.carousel-dots li.carousel-dots-active button:before {
+  opacity: 100% !important;
+  color: #F8475F !important;
+}
+
+.section-banner {
+  margin: 0 auto;
+}
+
+.section-banner img {
+  width: 100%;
+  background-size: cover;
+}

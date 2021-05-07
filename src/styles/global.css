@@ -8,3 +8,8 @@ html {
   list-style: none;
   border: 0
 }
+
+.limitador {
+  max-width: 1220px;
+  margin: 0 auto;
+}
