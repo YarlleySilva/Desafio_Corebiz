@@ -2,6 +2,8 @@ import "./styles/global.css";
 import Menu from "./components/Menu";
 import Banner from "./components/Banner";
 import Newsletter from "./components/Newsletter";
+import Footer from "./components/Footer";
+
 
 
 // export const formatNumber = number => {
@@ -19,6 +21,7 @@ function App() {
       <Banner />
       <div style={{ height: 100 }}></div>
       <Newsletter />
+      <Footer />
     </>
   );
 }

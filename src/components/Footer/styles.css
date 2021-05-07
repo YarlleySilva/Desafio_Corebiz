@@ -1,0 +1,66 @@
+.section-footer {
+  height: 21.3rem;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer-enderecos {
+  color: #ffffff;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  padding: 1rem;
+}
+
+.footer-enderecos p {
+  padding: 1rem;
+}
+
+.footer-enderecos p:nth-child(1) {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.footer-enderecos div {
+  background-color: #ffffff;
+  width: 4.5rem;
+  height: 0.5rem;
+  margin-left: 1rem;
+}
+
+.footer-line {
+  height: 1rem;
+  background-color: #C0C0C0;
+}
+
+.footer-contatos button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+  width: 19.5rem;
+  height: 3.8rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.footer-logos {
+  display: flex;
+}
+
+.footer-logos div {
+  padding: 2.5rem;
+}
+
+@media only screen and (max-width: 580px) {
+  .section-footer {
+    height: 40.2rem;
+    flex-direction: column;
+  }
+  .footer-enderecos {
+    width: 100%;
+  }
+}
