@@ -3,6 +3,7 @@ import Logo from "../../assets/logo.svg";
 import Search from "../../assets/search.svg";
 import Cart from "../../assets/cart.svg";
 import User from "../../assets/user.svg";
+import Hamburger from "../../assets/hamburger.svg"
 
 import "./styles.css";
 
@@ -12,6 +13,10 @@ const Menu = () => {
     <div className="container">
       <div className="limitador">
         <header className="container-header">
+
+          <div className="header-hamburger">
+            <img src={Hamburger} alt="" style={{ width: 109 }} />
+          </div>
 
           <div className="header-logo">
             <img src={Logo} alt="" style={{ width: 109 }} />
@@ -24,7 +29,7 @@ const Menu = () => {
             </button>
           </div>
 
-          <div>
+          <div className="header-user">
             <img src={User} alt="" /> Minha Conta
           </div>
 
