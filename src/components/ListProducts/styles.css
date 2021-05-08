@@ -1,0 +1,96 @@
+.section-products {
+  max-width: 1500px;
+  height: 45rem;
+  padding-top: 3rem;
+  margin: 0 auto;
+}
+
+.section-text {
+  padding-left: 4rem;
+  padding-bottom: 2rem;
+}
+
+.section-text h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.section-text div {
+  width: 4.5rem;
+  height: 0.5rem;
+  background-color: red;
+}
+
+.section-list-products {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-product {
+  background-color: #ffffff;
+  width: 21.6rem;
+  height: 35.3rem;
+}
+
+.react-multi-carousel-list {
+  position: static;
+}
+
+.product-information, .product-btn {
+  text-align: center;
+}
+
+.product-information {
+  padding: 0.5rem;
+}
+
+.container-product:hover {
+  background-color: #E6E8EA;
+}
+
+.container-product:hover button {
+  background-color: #000000;
+}
+
+.product-btn button {
+  width: 12.5rem;
+  height: 3.2rem;
+  background-color: #ffffff;
+  color: #ffffff;
+  border-radius: 0.5rem;
+}
+
+.product-btn button:hover {
+  background-color: #333333;
+}
+
+.product-information div:nth-child(1) {
+  color: #7A7A7A;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 0.1rem;
+}
+
+.product-information div:nth-child(2) {
+  color: #F8475F;
+  font-size: 1.1rem;
+}
+
+.product-information div:nth-child(3) {
+  color: #7A7A7A;
+  font-size: 1.2rem;
+  padding-bottom: 0.1rem;
+}
+
+.product-information div:nth-child(4) {
+  color: #000000;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding-bottom: 0.2rem;
+}
+
+.product-information div:nth-child(5) {
+  color: #7A7A7A;
+  font-size: 1.1rem;
+  padding-bottom: 0.1rem;
+}

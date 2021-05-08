@@ -3,23 +3,14 @@ import Menu from "./components/Menu";
 import Banner from "./components/Banner";
 import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
-
-
-
-// export const formatNumber = number => {
-//   return new Intl.NumberFormat('pt-br', { style: 'currency', currency: 'BRL' }).format(number);
-//   const result = number / 100;
-//   return result.toFixed(2);
-
-//   <h1>{formatNumber(19900)}</h1>
-// }
+import ListProducts from "./components/ListProducts";
 
 function App() {
   return (
     <>
       <Menu />
       <Banner />
-      <div style={{ height: 100 }}></div>
+      <ListProducts />
       <Newsletter />
       <Footer />
     </>
