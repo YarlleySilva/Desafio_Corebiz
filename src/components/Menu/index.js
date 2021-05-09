@@ -1,4 +1,3 @@
-// import Hamburger from "../../assets/hamburger.svg";
 import Logo from "../../assets/logo.svg";
 import Search from "../../assets/search.svg";
 import Cart from "../../assets/cart.svg";
@@ -7,7 +6,7 @@ import Hamburger from "../../assets/hamburger.svg"
 
 import "./styles.css";
 
-const Menu = () => {
+const Menu = ({ quantity }) => {
 
   return (
     <div className="container">
@@ -35,13 +34,14 @@ const Menu = () => {
 
           <div className="header-cart">
             <img src={Cart} alt="" />
-            <span>1</span>
+            <span>{quantity}</span>
           </div>
 
 
         </header>
       </div>
     </div>
+
   );
 }
 

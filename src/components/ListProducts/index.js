@@ -4,7 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import api from "../../services/api";
 import "../ListProducts/styles.css";
 
-const ListProducts = () => {
+const ListProducts = ({ atualizarCart }) => {
 
   const responsive = {
     desktop: {
@@ -25,16 +25,25 @@ const ListProducts = () => {
   }
 
   const [products, SetProducts] = useState([]);
+  let [cart, setCart] = useState(localStorage.getItem("@quantityItems") ? parseInt(localStorage.getItem("@quantityItems", 10)) : 0);
+
 
   useEffect(() => {
     async function getApiProducts() {
       const response = await api.get("/products");
 
       SetProducts(response.data);
+
+      atualizarCart(cart)
     }
     getApiProducts();
 
-  }, []);
+  }, [atualizarCart, cart]);
+
+  const handleCart = () => {
+    setCart(cart += 1);
+    localStorage.setItem("@quantityItems", cart);
+  }
 
   const formatPrice = value => {
     new Intl.NumberFormat('pt-br', { style: 'currency', currency: 'BRL' }).format(value);
@@ -101,7 +110,7 @@ const ListProducts = () => {
                       </div>
 
                       <div className="product-btn">
-                        <button>COMPRAR</button>
+                        <button onClick={handleCart}>COMPRAR</button>
                       </div>
 
                     </div>
