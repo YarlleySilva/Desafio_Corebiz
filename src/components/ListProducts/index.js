@@ -3,6 +3,9 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import api from "../../services/api";
 import "../ListProducts/styles.css";
+import Star from "../../assets/star.svg";
+import StarColor from "../../assets/starCor.svg";
+
 
 const ListProducts = ({ atualizarCart }) => {
 
@@ -51,7 +54,62 @@ const ListProducts = ({ atualizarCart }) => {
     return result.toFixed(2);
   }
 
+  const AddColorStars = (value) => {
+    switch (value) {
+      case 1:
+        return (
+          <div>
+            <img src={StarColor} alt="" />
+            <img src={Star} alt="" />
+            <img src={Star} alt="" />
+            <img src={Star} alt="" />
+            <img src={Star} alt="" />
+          </div>)
 
+      case 2:
+        return (
+          <div>
+            <img src={StarColor} alt="" />
+            <img src={StarColor} alt="" />
+            <img src={Star} alt="" />
+            <img src={Star} alt="" />
+            <img src={Star} alt="" />
+          </div>)
+
+      case 3:
+        return (
+          <div>
+            <img src={StarColor} alt="" />
+            <img src={StarColor} alt="" />
+            <img src={StarColor} alt="" />
+            <img src={Star} alt="" />
+            <img src={Star} alt="" />
+          </div>)
+
+      case 4:
+        return (
+          <div>
+            <img src={StarColor} alt="" />
+            <img src={StarColor} alt="" />
+            <img src={StarColor} alt="" />
+            <img src={StarColor} alt="" />
+            <img src={Star} alt="" />
+          </div>)
+
+      case 5:
+        return (
+          <div>
+            <img src={StarColor} alt="" />
+            <img src={StarColor} alt="" />
+            <img src={StarColor} alt="" />
+            <img src={StarColor} alt="" />
+            <img src={StarColor} alt="" />
+          </div>)
+
+      default:
+        break;
+    }
+  }
 
   return (
     <div className="container">
@@ -93,7 +151,8 @@ const ListProducts = ({ atualizarCart }) => {
                       <div className="product-information">
                         <div>{productName}</div>
 
-                        <div>Estrelas {stars}</div>
+                        {/* <div>Estrelas {stars}</div> */}
+                        {AddColorStars(stars)}
 
                         {listPrice !== null ? <div className="product-oldprice">De R$ {formatPrice(listPrice)}</div> : <div></div>}
 
