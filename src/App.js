@@ -14,8 +14,6 @@ function App() {
     setQuatity(value);
   }
 
-  console.log(quantity)
-
   return (
 
     <>

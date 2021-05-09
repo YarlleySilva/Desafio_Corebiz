@@ -1,26 +1,38 @@
 
-import { useState } from "react";
-// import { useForm } from "react-hook-form";  DESINSTALAR SE NAO FOR USAR
+import api from "../../services/api";
+import { useForm } from "react-hook-form";
 import useModal from "react-hooks-use-modal";
 import "./styles.css";
 
 const Newsletter = () => {
 
-  // const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
   const [Modal, open, close] = useModal('root', {
     preventScroll: true
   });
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const handleSubmiteForm = (data) => {
 
-
-  const handleSubmiteForm = (e) => {
-    e.preventDefault();
-    setEmail(email);
-    console.log(`${name} e ${email}`);
+    console.log(`Nome: ${data.name}`);
+    console.log(`Email: ${data.email}`);
+    if (data) {
+      console.log("entrou")
+      open();
+      postSubmit(data);
+    }
   }
+
+  const postSubmit = async (data) => {
+
+    const response = await api.post("/newsletter", {
+      "email": data.email,
+      "name": data.name
+    });
+    console.log(response)
+
+  }
+
   return (
     <div className="container">
       <div className="limitador">
@@ -29,16 +41,30 @@ const Newsletter = () => {
             <h2>Participe de nossas news com promoções e novidades!</h2>
           </div>
 
-          <form className="newsletter-form" onSubmit={(e) => handleSubmiteForm(e)} noValidate>
+          <form className="newsletter-form" onSubmit={handleSubmit(handleSubmiteForm)} noValidate>
             <div className="inputs">
-              <input type="text" placeholder="Digite seu nome" autoComplete="off" onChange={e => setName(e.target.value)} />
+              <input
+                type="text"
+                required placeholder="Digite seu nome"
+                autoComplete="off"
+                {...register("name", { required: true })}
+              />
+              {errors.name && <p className="newsletter-msg-error">Preencha com seu nome completo</p>}
+
             </div>
 
             <div className="inputs">
-              <input type="text" placeholder="Digite seu Email" autoComplete="off" onChange={e => setEmail(e.target.value)} />
+              <input
+                type="email"
+                required
+                placeholder="Digite seu Email"
+                autoComplete="off"
+                {...register("email", { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i })}
+              />
+              {errors.email && <p className="newsletter-msg-error">Preencha com um e-mail válido</p>}
             </div>
 
-            <button type="submit" onClick={open}>Eu quero!</button>
+            <button type="submit">Eu quero!</button>
 
             <Modal>
               <div className="modal">

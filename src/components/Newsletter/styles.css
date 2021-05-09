@@ -70,6 +70,12 @@
   font-weight: bold;
 }
 
+.newsletter-msg-error {
+  color: #D7182A;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
 @media only screen and (max-width: 750px) {
   .section-newsletter {
     height: 27.6rem;
