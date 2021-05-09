@@ -145,13 +145,19 @@ const ListProducts = ({ atualizarCart }) => {
                   return (
                     <div key={productId} className="container-product">
                       <div className="product-image">
+                        {
+                          listPrice !== null ?
+                            <div className="discount">
+                              <h1>OFF</h1>
+                            </div> :
+                            ""
+                        }
                         <img src={imageUrl} alt="" />
                       </div>
 
                       <div className="product-information">
                         <div>{productName}</div>
 
-                        {/* <div>Estrelas {stars}</div> */}
                         {AddColorStars(stars)}
 
                         {listPrice !== null ? <div className="product-oldprice">De R$ {formatPrice(listPrice)}</div> : <div></div>}

@@ -94,3 +94,23 @@
   font-size: 1.1rem;
   padding-bottom: 0.1rem;
 }
+
+.discount {
+  width: 0;
+  height: 0;
+  border-top: 8rem solid #F8475F;
+  border-left: 8rem solid transparent;
+  z-index: 1000;
+  position: absolute;
+  left: 13.5rem;
+}
+
+.discount h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  position: absolute;
+  top: -65px;
+  right: 10px;
+  z-index: 99999;
+  color: #ffffff;
+}
